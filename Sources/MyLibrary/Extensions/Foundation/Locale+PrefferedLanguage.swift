@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Locale {
+public extension Locale {
 
     public static var preferred: Locale {
         guard let preferredIdentifier = Locale.preferredLanguages.first else {

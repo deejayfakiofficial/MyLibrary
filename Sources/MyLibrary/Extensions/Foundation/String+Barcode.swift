@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     
     func generateBarcode() -> UIImage? {
         let data = self.data(using: String.Encoding.ascii)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
     func round(to digits: Int = 2) -> Double {
         let devider = pow(10.0, Double(digits))
         return (self * Double(devider)).rounded() / Double(devider)

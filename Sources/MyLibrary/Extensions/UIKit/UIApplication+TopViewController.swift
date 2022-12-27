@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
 
-    public func topViewController(above controller: UIViewController? = nil) -> UIViewController? {
+    func topViewController(above controller: UIViewController? = nil) -> UIViewController? {
 
         let rootViewController = controller ?? self.windows.first(where: { $0.isKeyWindow })?.rootViewController
 

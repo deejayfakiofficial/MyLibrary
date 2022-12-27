@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
+    
     func findSubviewByType<T: UIView>(type: T.Type) -> T? {
         if let view = (self as? T) {
             return view

@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-extension UIControl {
+public extension UIControl {
+    
     func addAction(for controlEvents: UIControl.Event = .touchUpInside,
                    _ closure: @escaping () -> Void) {
         @objc class ClosureSleeve: NSObject {

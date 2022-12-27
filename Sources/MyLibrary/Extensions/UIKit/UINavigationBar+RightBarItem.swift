@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-extension UINavigationBar {
+public extension UINavigationBar {
 
     func addRightSubview(_ rightSubview: UIView, rightOffset: CGPoint) {
         for subview in self.subviews where subview.subviews.first(where: { $0 is UILabel }) != nil {

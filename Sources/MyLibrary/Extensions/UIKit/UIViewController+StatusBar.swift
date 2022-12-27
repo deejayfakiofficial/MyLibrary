@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Set status bar backgound color
     /// - Parameter color: UIColor to set

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension Date {
+public extension Date {
     func monthName() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("MMMM")

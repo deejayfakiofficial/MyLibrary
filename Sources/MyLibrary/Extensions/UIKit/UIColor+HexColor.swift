@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+public extension UIColor {
+    
     convenience init?(fromHexString: String, alpha: CGFloat? = 1.0) {
     // Convert hex string to an integer
     let hexint = Int(UIColor.colorInteger(fromHexString: fromHexString))

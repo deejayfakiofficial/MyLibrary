@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-extension UIStackView {
+public extension UIStackView {
+    
     func addHorizontalSeparators(color: UIColor) {
         var i = self.arrangedSubviews.count - 1
         while i > 0 {

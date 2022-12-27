@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 
     // MARK: - spacingValue is spacing that you need
     func addInterlineSpacing(spacingValue: CGFloat = 2) {

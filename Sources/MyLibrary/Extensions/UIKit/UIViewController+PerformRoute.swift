@@ -9,7 +9,8 @@ import Foundation
 import PanModal
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
+    
     func performRoute(router: Route) {
         let destinationViewController = router.configureViewController()
         switch router.presentationStyle {
@@ -80,7 +81,7 @@ public protocol Route {
     func navigationController(for vc: UIViewController) -> UINavigationController?
 }
 
-extension Route {
+public extension Route {
     func navigationController(for vc: UIViewController) -> UINavigationController? {
         return nil
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     func masked(by mask: String) -> String {
         let numbers = self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         var result = ""

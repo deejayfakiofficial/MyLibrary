@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIImage {
+public extension UIImage {
 
     func alpha(_ value: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)

@@ -6,7 +6,8 @@
 //
 
 import Foundation
-extension Double {
+
+public extension Double {
     func getStringifiedPrice() -> String? {
         let formatterFloatingDigits = floor(Double(truncating: NSNumber(value: self))) == Double(truncating: NSNumber(value: self)) ? 0 : 2
         let formatter = NumberFormatter()

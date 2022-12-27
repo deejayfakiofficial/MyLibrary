@@ -7,7 +7,8 @@
 
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
+    
     func reloadDataSavingSelections() {
         let selectedItems = indexPathsForSelectedItems
         reloadData()

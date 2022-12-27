@@ -7,7 +7,9 @@
 
 import Foundation
 import UIKit
-extension UITapGestureRecognizer {
+
+public extension UITapGestureRecognizer {
+    
     func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
         // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
         let layoutManager = NSLayoutManager()

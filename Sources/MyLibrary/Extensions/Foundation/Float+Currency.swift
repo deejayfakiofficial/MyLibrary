@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Float {
+public extension Float {
     
     func formatToCurrency() -> String? {
         let currencyFormatter = NumberFormatter()
