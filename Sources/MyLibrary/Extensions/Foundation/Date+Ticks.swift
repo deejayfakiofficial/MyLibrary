@@ -8,7 +8,8 @@
 import Foundation
 
 public extension Date {
-    public func currentTimeInTicks() -> Int64 {
+    
+    func currentTimeInTicks() -> Int64 {
         let CTicksAt1970: Int64 = 621_355_968_000_000_000
         let CTicksPerSecond: Double = 10_000_000
         let CTicksMinValue: Int64 = 0

@@ -8,6 +8,7 @@
 import Foundation
 
 public extension Double {
+    
     func strigified(to digits: Int = 2, currency: String? = nil) -> String {
         let roundedString = String(format: "%.\(digits)f", self)
         if let currency = currency {
