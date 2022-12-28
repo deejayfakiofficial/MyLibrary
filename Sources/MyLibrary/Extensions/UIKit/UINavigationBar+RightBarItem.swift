@@ -7,19 +7,20 @@
 
 import Foundation
 import UIKit
-import SnapKit
 
 public extension UINavigationBar {
 
     func addRightSubview(_ rightSubview: UIView, rightOffset: CGPoint) {
         for subview in self.subviews where subview.subviews.first(where: { $0 is UILabel }) != nil {
             subview.addSubview(rightSubview)
-            rightSubview.snp.makeConstraints { (maker) in
-                maker.width.equalTo(rightSubview.frame.width)
-                maker.height.equalTo(rightSubview.frame.height)
-                maker.right.equalToSuperview().offset(rightOffset.x)
-                maker.bottom.equalToSuperview().offset(rightOffset.y)
-            }
+            
+            rightSubview.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                rightSubview.widthAnchor.constraint(equalToConstant: rightSubview.frame.width),
+                rightSubview.heightAnchor.constraint(equalToConstant: rightSubview.frame.height),
+                rightSubview.trailingAnchor.constraint(equalTo: subview.trailingAnchor, constant: rightOffset.x),
+                rightSubview.bottomAnchor.constraint(equalTo: subview.bottomAnchor, constant: rightOffset.y)
+            ])
             break
         }
     }

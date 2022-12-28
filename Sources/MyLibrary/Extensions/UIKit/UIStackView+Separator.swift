@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SnapKit
 
 public extension UIStackView {
     
@@ -25,13 +24,15 @@ public extension UIStackView {
         let separator = UIView()
         let separatorSubView = UIView()
         separator.addSubview(separatorSubView)
+        separatorSubView.translatesAutoresizingMaskIntoConstraints = false
         separatorSubView.backgroundColor = color
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        separatorSubView.snp.makeConstraints({ maker in
-            maker.left.equalToSuperview().offset(20)
-            maker.right.equalToSuperview().offset(-20)
-            maker.top.bottom.equalToSuperview()
-        })
+        NSLayoutConstraint.activate([
+            separatorSubView.leadingAnchor.constraint(equalTo: separator.leadingAnchor, constant: 20),
+            separatorSubView.trailingAnchor.constraint(equalTo: separator.trailingAnchor, constant: -20),
+            separatorSubView.topAnchor.constraint(equalTo: separator.topAnchor),
+            separatorSubView.bottomAnchor.constraint(equalTo: separator.bottomAnchor)
+        ])
         return separator
     }
 }
